@@ -6,24 +6,24 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/">
-          <a className={styles.logo}>ポートフォリオ</a>
+        <Link href="/" className={styles.logo}>
+          ポートフォリオ
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="/about">
-                <a className={styles.navLink}>自己紹介</a>
+              <Link href="/about" className={styles.navLink}>
+                自己紹介
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/projects">
-                <a className={styles.navLink}>プロジェクト</a>
+              <Link href="/projects" className={styles.navLink}>
+                プロジェクト
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/blog">
-                <a className={styles.navLink}>ブログ</a>
+              <Link href="/blog" className={styles.navLink}>
+                ブログ
               </Link>
             </li>
           </ul>
@@ -33,4 +33,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Header

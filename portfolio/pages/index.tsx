@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../src/components/Header/Header';
-// import Footer from '../src/components/Footer/Footer';
+import Footer from '../src/components/Footer/Footer';
 // import ProjectCard from '../src/components/ProjectCard/ProjectCard';
 
 const IndexPage: React.FC = () => {
@@ -37,7 +37,7 @@ const IndexPage: React.FC = () => {
           </div> */}
         </section>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
