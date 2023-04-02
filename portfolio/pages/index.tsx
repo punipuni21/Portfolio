@@ -1,7 +1,8 @@
+import React from 'react';
 import Head from 'next/head';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
+import Header from '../src/components/Header/Header';
+// import Footer from '../src/components/Footer/Footer';
+// import ProjectCard from '../src/components/ProjectCard/ProjectCard';
 
 const IndexPage: React.FC = () => {
   // この配列にプロジェクト情報を入れていきます。
@@ -29,14 +30,14 @@ const IndexPage: React.FC = () => {
         </section>
         <section>
           <h2>プロジェクト一覧</h2>
-          <div>
+          {/* <div>
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-          </div>
+          </div> */}
         </section>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
