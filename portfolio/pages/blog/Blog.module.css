@@ -1,0 +1,63 @@
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.postsList {
+  list-style: none;
+  padding: 0;
+}
+
+.post {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.postTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.postDate {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.postExcerpt {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* 続きを読むリンク用のスタイルを追加 */
+.readMore {
+  font-size: 1rem;
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.readMore:hover {
+  color: #0366d6;
+}
