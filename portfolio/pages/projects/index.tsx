@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../../styles/projects/Project.module.css";
+import styles from "../../styles/projects/Projects.module.css";
 
 interface Project {
   id: string;
