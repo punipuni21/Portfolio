@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../../src/components/Header/Header";
 import Footer from "../../src/components/Footer/Footer";
-import styles from "./Blog.module.css";
+import styles from "../../styles/blog/Blog.module.css";
 
 type BlogPost = {
   id: string;
