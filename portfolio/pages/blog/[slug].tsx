@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Header from "../../src/components/Header/Header";
 import Footer from "../../src/components/Footer/Footer";
-import styles from "./BlogPost.module.css";
+import styles from "../../styles/blog/BlogPost.module.css";
 
 type BlogPost = {
   slug: string;
