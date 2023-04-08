@@ -4,6 +4,7 @@ import Header from "../src/components/Header/Header";
 import Footer from "../src/components/Footer/Footer";
 import ProjectCard from "../src/components/ProjectCard/ProjectCard";
 import SkillCard from "../src/components/SkillCard/SkillCard";
+import SocialMediaIcon from "../src/components/SocialMediaIcon/SocialMediaIcon";
 
 const IndexPage: React.FC = () => {
   // この配列にプロジェクト情報を入れていきます。
@@ -19,10 +20,36 @@ const IndexPage: React.FC = () => {
 
   const skills = [
     {
-      name: "React",
-      icon: "sample",
+      name: "JavaScript",
+      icon: "/icons/javascript.svg",
     },
-    // 他のプロジェクト情報を追加できます。
+    {
+      name: "TypeScript",
+      icon: "/icons/typescript.svg",
+    },
+    {
+      name: "React",
+      icon: "/icons/react.svg",
+    },
+    // 他のスキルを追加...
+  ];
+
+  const socialMedias = [
+    {
+      name: "GitHub",
+      icon: "/icons/github.svg",
+      url: "https://github.com/punipuni21",
+    },
+    {
+      name: "Twitter",
+      icon: "/icons/twitter.svg",
+      url: "https://twitter.com/puni_kyopro",
+    },
+    {
+      name: "LinkedIn",
+      icon: "/icons/linkedin.svg",
+      url: "https://www.linkedin.com/in/yourusername/",
+    },
   ];
 
   return (
@@ -41,7 +68,7 @@ const IndexPage: React.FC = () => {
         </section>
         <section>
           <h2>プロジェクト一覧</h2>
-          <div>
+          <div className="projectContainer">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -49,9 +76,20 @@ const IndexPage: React.FC = () => {
         </section>
         <section>
           <h2>スキル一覧</h2>
-          <div>
+          <div className="skillsContainer">
             {skills.map((skill) => (
-              <SkillCard key={skill.id} skill={skill} />
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2>ソーシャルメディア</h2>
+          <div className="socialMediaContainer">
+            {socialMedias.map((socialMedia) => (
+              <SocialMediaIcon
+                key={socialMedia.name}
+                socialMedia={socialMedia}
+              />
             ))}
           </div>
         </section>

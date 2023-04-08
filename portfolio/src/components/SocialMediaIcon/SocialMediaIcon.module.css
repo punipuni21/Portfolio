@@ -1,0 +1,14 @@
+.iconContainer {
+  display: inline-block;
+  margin: 0 0.5rem;
+  transition: transform 0.3s;
+}
+
+.iconContainer:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
