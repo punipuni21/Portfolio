@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../src/components/Header/Header";
 import Footer from "../src/components/Footer/Footer";
 import ProjectCard from "../src/components/ProjectCard/ProjectCard";
+import SkillCard from "../src/components/SkillCard/SkillCard";
 
 const IndexPage: React.FC = () => {
   // この配列にプロジェクト情報を入れていきます。
@@ -12,6 +13,14 @@ const IndexPage: React.FC = () => {
       title: "Project 1",
       description: "Project 1の説明文です。",
       imageUrl: "../public/images/favicon.ico",
+    },
+    // 他のプロジェクト情報を追加できます。
+  ];
+
+  const skills = [
+    {
+      name: "React",
+      icon: "sample",
     },
     // 他のプロジェクト情報を追加できます。
   ];
@@ -35,6 +44,14 @@ const IndexPage: React.FC = () => {
           <div>
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2>スキル一覧</h2>
+          <div>
+            {skills.map((skill) => (
+              <SkillCard key={skill.id} skill={skill} />
             ))}
           </div>
         </section>
