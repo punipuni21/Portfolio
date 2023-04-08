@@ -5,6 +5,7 @@ import Footer from "../src/components/Footer/Footer";
 import ProjectCard from "../src/components/ProjectCard/ProjectCard";
 import SkillCard from "../src/components/SkillCard/SkillCard";
 import SocialMediaIcon from "../src/components/SocialMediaIcon/SocialMediaIcon";
+import styles from "./TopPage.module.css";
 
 const IndexPage: React.FC = () => {
   // この配列にプロジェクト情報を入れていきます。
@@ -53,13 +54,13 @@ const IndexPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>ポートフォリオ</title>
         <meta name="description" content="ポートフォリオサイトです。" />
       </Head>
       <Header />
-      <main>
+      <main className={styles.content}>
         <section>
           <h1>自己紹介</h1>
           <p>
@@ -67,8 +68,8 @@ const IndexPage: React.FC = () => {
           </p>
         </section>
         <section>
-          <h2>プロジェクト一覧</h2>
-          <div className="projectContainer">
+          <h2 className={styles.h2}>プロジェクト一覧</h2>
+          <div className={styles.projects}>
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -76,7 +77,7 @@ const IndexPage: React.FC = () => {
         </section>
         <section>
           <h2>スキル一覧</h2>
-          <div className="skillsContainer">
+          <div className={styles.skills}>
             {skills.map((skill) => (
               <SkillCard key={skill.name} skill={skill} />
             ))}
@@ -95,7 +96,7 @@ const IndexPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
